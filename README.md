@@ -1,0 +1,1 @@
+# typescript-rabbitmq-event-processor
