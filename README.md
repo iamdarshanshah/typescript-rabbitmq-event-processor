@@ -1,1 +1,1 @@
-Typescript event listener worker service
+# typescript-rabbitmq-event-processor
