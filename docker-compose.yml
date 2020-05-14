@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  caliber-worker-agent:
+    image: ts-event-processor:1.0.0
+    build: ./
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "1"
+          memory: 256M
+      restart_policy:
+        condition: always
+    ports:
+      - "5000:5000"
+    env_file: "./docker_env/${NODE_ENV:-local}/docker.${NODE_ENV:-local}.env"

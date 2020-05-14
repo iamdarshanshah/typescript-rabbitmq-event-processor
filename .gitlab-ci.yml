@@ -1,0 +1,28 @@
+image: node:12-alpine
+
+stages:
+  - build
+  - quality-checks
+
+cache:
+  paths:
+    - /.npm
+
+before_script:
+  - npm ci --cache .npm --prefer-offline
+
+build-web-service:
+  stage: build
+  script:
+    - npm install --silent
+    - npm run build
+
+lint-web-service:
+  stage: quality-checks
+  script:
+    - npm run lint
+
+test-web-service:
+  stage: quality-checks
+  script:
+    - npm run lint

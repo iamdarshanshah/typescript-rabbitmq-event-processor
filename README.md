@@ -1,0 +1,1 @@
+Typescript event listener worker service

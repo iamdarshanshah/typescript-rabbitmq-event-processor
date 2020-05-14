@@ -1,0 +1,53 @@
+{
+  "name": "typescript-event-processor",
+  "version": "1.0.0",
+  "description": "A worker service to enable listening of events from rabbitMQ.",
+  "main": "build/server.js",
+  "scripts": {
+    "build": "rm -rf ./dist && ./node_modules/.bin/tsc",
+    "start": "node ./dist/server.js",
+    "lint": "./node_modules/.bin/eslint --ext ts ./src",
+    "compodoc": "compodoc",
+    "generate-docs": "compodoc -p ./tsconfig.json",
+    "serve-docs": "compodoc -s ./tsconfig.json",
+    "test": "node_modules/.bin/jest --forceExit --coverage --verbose --detectOpenHandles"
+  },
+  "dependencies": {
+    "amqp-ts": "^1.8.0",
+    "jest": "^25.1.0",
+    "log4js": "^6.1.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/async": "^3.2.1",
+    "@types/lodash": "^4.14.150",
+    "@types/amqplib": "^0.5.13",
+    "@compodoc/compodoc": "^1.1.11",
+    "@types/eslint": "^6.1.1",
+    "@types/jest": "^25.1.4",
+    "@types/jsonwebtoken": "^8.3.8",
+    "@types/node": "^12.12.29",
+    "@types/request": "^2.48.4",
+    "@types/supertest": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "express",
+    "boilerplate",
+    "rest",
+    "apis",
+    "oop",
+    "MVC",
+    "mongoDB"
+  ],
+  "author": "Darshan Shah",
+  "license": "ISC"
+}
